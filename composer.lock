@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "18518cfe552cfa160f2e20dce58293d3",
+    "content-hash": "049a5caaa757411f0c74a7503d9f04af",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -617,71 +617,6 @@
             "time": "2019-09-03T16:44:30+00:00"
         },
         {
-            "name": "laravel/scout",
-            "version": "v5.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/scout.git",
-                "reference": "ac7e8d2de8fba37473e3a802347d8f24141993cd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/ac7e8d2de8fba37473e3a802347d8f24141993cd",
-                "reference": "ac7e8d2de8fba37473e3a802347d8f24141993cd",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/bus": "~5.4",
-                "illuminate/contracts": "~5.4",
-                "illuminate/database": "~5.4",
-                "illuminate/pagination": "~5.4",
-                "illuminate/queue": "~5.4",
-                "illuminate/support": "~5.4",
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "algolia/algoliasearch-client-php": "^1.10",
-                "mockery/mockery": "~1.0",
-                "phpunit/phpunit": "~6.0"
-            },
-            "suggest": {
-                "algolia/algoliasearch-client-php": "Required to use the Algolia engine (^1.10)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0-dev"
-                },
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Scout\\ScoutServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Scout\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Laravel Scout provides a driver based solution to searching your Eloquent models.",
-            "keywords": [
-                "algolia",
-                "laravel",
-                "search"
-            ],
-            "time": "2018-08-05T18:16:13+00:00"
-        },
-        {
             "name": "laravel/tinker",
             "version": "v1.0.10",
             "source": {
@@ -1136,16 +1071,16 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.7.1",
+            "version": "1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "100a25207566930efd926cf205542946aa692e01"
+                "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/100a25207566930efd926cf205542946aa692e01",
-                "reference": "100a25207566930efd926cf205542946aa692e01",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
+                "reference": "77f7c4d2e65413aff5b5a8cc8b3caf7a28d81959",
                 "shasum": ""
             },
             "require": {
@@ -1187,7 +1122,7 @@
                 "php",
                 "type"
             ],
-            "time": "2019-12-14T13:46:39+00:00"
+            "time": "2019-12-15T19:35:24+00:00"
         },
         {
             "name": "psr/container",
@@ -1408,57 +1343,6 @@
             "time": "2019-12-06T14:19:43+00:00"
         },
         {
-            "name": "pxslip/laravel-scout-solr",
-            "version": "v1.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pxslip/laravel-scout-solr.git",
-                "reference": "397388348184fe44930fbb1749d81310ead8c9f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pxslip/laravel-scout-solr/zipball/397388348184fe44930fbb1749d81310ead8c9f3",
-                "reference": "397388348184fe44930fbb1749d81310ead8c9f3",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.4",
-                "laravel/scout": "^5.0",
-                "php": "^7.0",
-                "solarium/solarium": "^4.1"
-            },
-            "require-dev": {
-                "squizlabs/php_codesniffer": "^3.2",
-                "vimeo/psalm": "^3.1"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Scout\\Solr\\ScoutSolrServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Scout\\Solr\\": "src/",
-                    "Scout\\Solr\\Tests\\": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Will Kruse",
-                    "email": "wskruse@gmail.com"
-                }
-            ],
-            "description": "A driver for the Laravel Scout search tools, using Apache Solr for the backend",
-            "time": "2019-06-04T18:38:08+00:00"
-        },
-        {
             "name": "ramsey/uuid",
             "version": "3.9.1",
             "source": {
@@ -1547,38 +1431,34 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "4.2.0",
+            "version": "5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d"
+                "reference": "3abd884313a52c47cefb44a6daa27f1d6eb253f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d",
-                "reference": "20cf9e906a4e8e4a29c1ff48a2b145fa31d1064d",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/3abd884313a52c47cefb44a6daa27f1d6eb253f6",
+                "reference": "3abd884313a52c47cefb44a6daa27f1d6eb253f6",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0",
-                "symfony/event-dispatcher": "^2.7 || ^3.0 || ^4.0"
+                "ext-json": "*",
+                "php": "^7.1.3",
+                "symfony/event-dispatcher": "^4.3 || ^5.0"
             },
             "require-dev": {
                 "guzzlehttp/guzzle": "^3.8 || ^6.2",
-                "php-coveralls/php-coveralls": "^1.0",
-                "phpunit/phpunit": "^6.5",
-                "squizlabs/php_codesniffer": "^1.4",
-                "zendframework/zendframework": "^3.0"
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^8.0",
+                "squizlabs/php_codesniffer": "^3.4",
+                "zendframework/zend-http": "^2.8"
             },
             "suggest": {
                 "minimalcode/search": "Query builder compatible with Solarium, allows simplified solr-query handling"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.1.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Solarium\\": "src/"
@@ -1601,7 +1481,7 @@
                 "search",
                 "solr"
             ],
-            "time": "2018-11-24T09:20:30+00:00"
+            "time": "2019-12-06T23:24:54+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3485,16 +3365,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.9.3",
+            "version": "1.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea"
+                "reference": "579bb7356d91f9456ccd505f24ca8b667966a0a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/007c053ae6f31bba39dfa19a7726f56e9763bbea",
-                "reference": "007c053ae6f31bba39dfa19a7726f56e9763bbea",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/579bb7356d91f9456ccd505f24ca8b667966a0a7",
+                "reference": "579bb7356d91f9456ccd505f24ca8b667966a0a7",
                 "shasum": ""
             },
             "require": {
@@ -3529,7 +3409,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2019-08-09T12:45:53+00:00"
+            "time": "2019-12-15T19:12:40+00:00"
         },
         {
             "name": "nunomaduro/collision",

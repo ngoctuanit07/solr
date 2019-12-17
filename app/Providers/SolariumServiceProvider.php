@@ -6,17 +6,17 @@ use Illuminate\Support\ServiceProvider;
 use Solarium\Client;
 class SolariumServiceProvider extends ServiceProvider
 {
+    protected $defer = true;
     /**
      * Register services.
      *
      * @return void
      */
-    protected $defer = true;
     public function register()
     {
         //
         $this->app->bind(Client::class, function ($app) {
-            return new Client($app['config']['solarium']);
+            return new Client($app['config']['solr']);
         });
     }
     public function provides()

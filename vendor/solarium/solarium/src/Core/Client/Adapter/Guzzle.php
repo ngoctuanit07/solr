@@ -3,6 +3,8 @@
 namespace Solarium\Core\Client\Adapter;
 
 use GuzzleHttp\Client as GuzzleClient;
+use GuzzleHttp\Exception\BadResponseException;
+use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
 use Solarium\Core\Client\Endpoint;
 use Solarium\Core\Client\Request;
@@ -29,13 +31,13 @@ class Guzzle extends Configurable implements AdapterInterface
      * @param Endpoint $endpoint the configured Solr endpoint
      *
      * @throws HttpException thrown if solr request connot be made
+     * @throws
      *
      * @return Response
      *
-     *
      * @codingStandardsIgnoreStart AdapterInterface does not declare type-hints
      */
-    public function execute($request, $endpoint)
+    public function execute(Request $request, Endpoint $endpoint): Response
     {
         //@codingStandardsIgnoreEnd
         $requestOptions = [
@@ -56,8 +58,8 @@ class Guzzle extends Configurable implements AdapterInterface
         }
 
         try {
-            $baseUri = $request->getIsServerRequest() ? $endpoint->getServerUri() : $endpoint->getCoreBaseUri();
-            $uri = $baseUri.$request->getUri();
+            $uri = AdapterHelper::buildUri($request, $endpoint);
+
             $guzzleResponse = $this->getGuzzleClient()->request(
                 $request->getMethod(),
                 $uri,
@@ -74,8 +76,16 @@ class Guzzle extends Configurable implements AdapterInterface
             }
 
             return new Response((string) $guzzleResponse->getBody(), $responseHeaders);
-        } catch (\GuzzleHttp\Exception\RequestException $e) {
+        } catch (GuzzleException $e) {
+            // Guzzle truncates the error message, therefore we try to get the full message from Solr below
             $error = $e->getMessage();
+            if ($e instanceof BadResponseException) {
+                try {
+                    $error = $e->getResponse()->getBody()->getContents();
+                } catch (\Exception $e) {
+                    // Fall back to the short message
+                }
+            }
             throw new HttpException("HTTP request failed, {$error}");
         }
     }
@@ -112,8 +122,7 @@ class Guzzle extends Configurable implements AdapterInterface
         }
 
         if ($request->getFileUpload()) {
-            $helper = new AdapterHelper();
-            return $helper->buildUploadBodyFromRequest($request);
+            return AdapterHelper::buildUploadBodyFromRequest($request);
         }
 
         return $request->getRawData();

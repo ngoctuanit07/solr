@@ -12,8 +12,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
-        "pxslip/laravel-scout-solr": "^1.5",
-        "solarium/solarium": "^4.1"
+        "solarium/solarium": "^5.1"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

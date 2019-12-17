@@ -2,8 +2,8 @@
 
 namespace Solarium\Plugin\BufferedAdd\Event;
 
-use Solarium\QueryType\Select\Result\DocumentInterface;
-use Symfony\Component\EventDispatcher\Event;
+use Solarium\Core\Query\DocumentInterface;
+use Symfony\Contracts\EventDispatcher\Event;
 
 /**
  * PreCommit event, see Events for details.
@@ -21,30 +21,30 @@ class PreCommit extends Event
     protected $overwrite;
 
     /**
-     * @var bool
+     * @var bool|null
      */
     protected $softCommit;
 
     /**
-     * @var bool
+     * @var bool|null
      */
     protected $waitSearcher;
 
     /**
-     * @var bool
+     * @var bool|null
      */
     protected $expungeDeletes;
 
     /**
      * Event constructor.
      *
-     * @param array $buffer
-     * @param bool  $overwrite
-     * @param bool  $softCommit
-     * @param bool  $waitSearcher
-     * @param bool  $expungeDeletes
+     * @param array     $buffer
+     * @param bool      $overwrite
+     * @param bool|null $softCommit
+     * @param bool|null $waitSearcher
+     * @param bool|null $expungeDeletes
      */
-    public function __construct($buffer, $overwrite, $softCommit, $waitSearcher, $expungeDeletes)
+    public function __construct(array $buffer, bool $overwrite, ?bool $softCommit, ?bool $waitSearcher, ?bool $expungeDeletes)
     {
         $this->buffer = $buffer;
         $this->overwrite = $overwrite;
@@ -58,7 +58,7 @@ class PreCommit extends Event
      *
      * @return DocumentInterface[]
      */
-    public function getBuffer()
+    public function getBuffer(): array
     {
         return $this->buffer;
     }
@@ -66,27 +66,33 @@ class PreCommit extends Event
     /**
      * Set the buffer for this event, this way you can alter the buffer before it is committed to Solr.
      *
-     * @param array $buffer
+     * @param DocumentInterface[] $buffer
+     *
+     * @return self Provides fluent interface
      */
-    public function setBuffer($buffer)
+    public function setBuffer(array $buffer): self
     {
         $this->buffer = $buffer;
+        return $this;
     }
 
     /**
      * Optionally override the value.
      *
      * @param bool $expungeDeletes
+     *
+     * @return self Provides fluent interface
      */
-    public function setExpungeDeletes($expungeDeletes)
+    public function setExpungeDeletes(bool $expungeDeletes): self
     {
         $this->expungeDeletes = $expungeDeletes;
+        return $this;
     }
 
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function getExpungeDeletes()
+    public function getExpungeDeletes(): ?bool
     {
         return $this->expungeDeletes;
     }
@@ -95,16 +101,19 @@ class PreCommit extends Event
      * Optionally override the value.
      *
      * @param bool $overwrite
+     *
+     * @return self Provides fluent interface
      */
-    public function setOverwrite($overwrite)
+    public function setOverwrite(bool $overwrite): self
     {
         $this->overwrite = $overwrite;
+        return $this;
     }
 
     /**
      * @return bool
      */
-    public function getOverwrite()
+    public function getOverwrite(): bool
     {
         return $this->overwrite;
     }
@@ -113,16 +122,19 @@ class PreCommit extends Event
      * Optionally override the value.
      *
      * @param bool $softCommit
+     *
+     * @return self Provides fluent interface
      */
-    public function setSoftCommit($softCommit)
+    public function setSoftCommit(bool $softCommit): self
     {
         $this->softCommit = $softCommit;
+        return $this;
     }
 
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function getSoftCommit()
+    public function getSoftCommit(): ?bool
     {
         return $this->softCommit;
     }
@@ -131,16 +143,19 @@ class PreCommit extends Event
      * Optionally override the value.
      *
      * @param bool $waitSearcher
+     *
+     * @return self Provides fluent interface
      */
-    public function setWaitSearcher($waitSearcher)
+    public function setWaitSearcher(bool $waitSearcher): self
     {
         $this->waitSearcher = $waitSearcher;
+        return $this;
     }
 
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function getWaitSearcher()
+    public function getWaitSearcher(): ?bool
     {
         return $this->waitSearcher;
     }

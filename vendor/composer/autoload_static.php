@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
+class ComposerStaticInit74d7958296249903e147526873e80417
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -68,8 +68,6 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Solarium\\' => 9,
-            'Scout\\Solr\\Tests\\' => 17,
-            'Scout\\Solr\\' => 11,
         ),
         'R' => 
         array (
@@ -101,7 +99,6 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         array (
             'League\\Flysystem\\' => 17,
             'Laravel\\Tinker\\' => 15,
-            'Laravel\\Scout\\' => 14,
         ),
         'J' => 
         array (
@@ -263,14 +260,6 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         array (
             0 => __DIR__ . '/..' . '/solarium/solarium/src',
         ),
-        'Scout\\Solr\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pxslip/laravel-scout-solr/tests',
-        ),
-        'Scout\\Solr\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pxslip/laravel-scout-solr/src',
-        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -322,10 +311,6 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Laravel\\Tinker\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
-        ),
-        'Laravel\\Scout\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/laravel/scout/src',
         ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
@@ -415,7 +400,6 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\SolariumController' => __DIR__ . '/../..' . '/app/Http/Controllers/SolariumController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -429,7 +413,6 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
-        'App\\Providers\\SolariumServiceProvider' => __DIR__ . '/../..' . '/app/Providers/SolariumServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
@@ -1952,20 +1935,6 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
-        'Laravel\\Scout\\Builder' => __DIR__ . '/..' . '/laravel/scout/src/Builder.php',
-        'Laravel\\Scout\\Console\\FlushCommand' => __DIR__ . '/..' . '/laravel/scout/src/Console/FlushCommand.php',
-        'Laravel\\Scout\\Console\\ImportCommand' => __DIR__ . '/..' . '/laravel/scout/src/Console/ImportCommand.php',
-        'Laravel\\Scout\\EngineManager' => __DIR__ . '/..' . '/laravel/scout/src/EngineManager.php',
-        'Laravel\\Scout\\Engines\\AlgoliaEngine' => __DIR__ . '/..' . '/laravel/scout/src/Engines/AlgoliaEngine.php',
-        'Laravel\\Scout\\Engines\\Engine' => __DIR__ . '/..' . '/laravel/scout/src/Engines/Engine.php',
-        'Laravel\\Scout\\Engines\\NullEngine' => __DIR__ . '/..' . '/laravel/scout/src/Engines/NullEngine.php',
-        'Laravel\\Scout\\Events\\ModelsFlushed' => __DIR__ . '/..' . '/laravel/scout/src/Events/ModelsFlushed.php',
-        'Laravel\\Scout\\Events\\ModelsImported' => __DIR__ . '/..' . '/laravel/scout/src/Events/ModelsImported.php',
-        'Laravel\\Scout\\Jobs\\MakeSearchable' => __DIR__ . '/..' . '/laravel/scout/src/Jobs/MakeSearchable.php',
-        'Laravel\\Scout\\ModelObserver' => __DIR__ . '/..' . '/laravel/scout/src/ModelObserver.php',
-        'Laravel\\Scout\\ScoutServiceProvider' => __DIR__ . '/..' . '/laravel/scout/src/ScoutServiceProvider.php',
-        'Laravel\\Scout\\Searchable' => __DIR__ . '/..' . '/laravel/scout/src/Searchable.php',
-        'Laravel\\Scout\\SearchableScope' => __DIR__ . '/..' . '/laravel/scout/src/SearchableScope.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',
@@ -3186,10 +3155,6 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Ramsey\\Uuid\\UuidFactory' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactory.php',
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
-        'Scout\\Solr\\Builder' => __DIR__ . '/..' . '/pxslip/laravel-scout-solr/src/Builder.php',
-        'Scout\\Solr\\Engines\\SolrEngine' => __DIR__ . '/..' . '/pxslip/laravel-scout-solr/src/Engines/SolrEngine.php',
-        'Scout\\Solr\\ScoutSolrServiceProvider' => __DIR__ . '/..' . '/pxslip/laravel-scout-solr/src/ScoutSolrServiceProvider.php',
-        'Scout\\Solr\\Searchable' => __DIR__ . '/..' . '/pxslip/laravel-scout-solr/src/Searchable.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -3384,6 +3349,7 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\Component\\Result\\Facet\\Aggregation' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Result/Facet/Aggregation.php',
         'Solarium\\Component\\Result\\Facet\\Bucket' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Result/Facet/Bucket.php',
         'Solarium\\Component\\Result\\Facet\\Buckets' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Result/Facet/Buckets.php',
+        'Solarium\\Component\\Result\\Facet\\FacetResultInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Result/Facet/FacetResultInterface.php',
         'Solarium\\Component\\Result\\Facet\\Field' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Result/Facet/Field.php',
         'Solarium\\Component\\Result\\Facet\\Interval' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Result/Facet/Interval.php',
         'Solarium\\Component\\Result\\Facet\\MultiQuery' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Result/Facet/MultiQuery.php',
@@ -3411,6 +3377,7 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\Component\\Spatial' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Spatial.php',
         'Solarium\\Component\\Spellcheck' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Spellcheck.php',
         'Solarium\\Component\\SpellcheckInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Component/SpellcheckInterface.php',
+        'Solarium\\Component\\Stats\\FacetsTrait' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Stats/FacetsTrait.php',
         'Solarium\\Component\\Stats\\Field' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Stats/Field.php',
         'Solarium\\Component\\Stats\\Stats' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Stats/Stats.php',
         'Solarium\\Component\\Suggester' => __DIR__ . '/..' . '/solarium/solarium/src/Component/Suggester.php',
@@ -3423,14 +3390,18 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\Core\\Client\\Adapter\\Guzzle' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Adapter/Guzzle.php',
         'Solarium\\Core\\Client\\Adapter\\Guzzle3' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Adapter/Guzzle3.php',
         'Solarium\\Core\\Client\\Adapter\\Http' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Adapter/Http.php',
-        'Solarium\\Core\\Client\\Adapter\\PeclHttp' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Adapter/PeclHttp.php',
         'Solarium\\Core\\Client\\Adapter\\Zend2Http' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Adapter/Zend2Http.php',
-        'Solarium\\Core\\Client\\Adapter\\ZendHttp' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Adapter/ZendHttp.php',
         'Solarium\\Core\\Client\\Client' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Client.php',
         'Solarium\\Core\\Client\\ClientInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/ClientInterface.php',
         'Solarium\\Core\\Client\\Endpoint' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Endpoint.php',
         'Solarium\\Core\\Client\\Request' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Request.php',
         'Solarium\\Core\\Client\\Response' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/Response.php',
+        'Solarium\\Core\\Client\\State\\AbstractState' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/State/AbstractState.php',
+        'Solarium\\Core\\Client\\State\\ClusterState' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/State/ClusterState.php',
+        'Solarium\\Core\\Client\\State\\CollectionState' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/State/CollectionState.php',
+        'Solarium\\Core\\Client\\State\\ReplicaState' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/State/ReplicaState.php',
+        'Solarium\\Core\\Client\\State\\ShardState' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/State/ShardState.php',
+        'Solarium\\Core\\Client\\State\\StateInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Client/State/StateInterface.php',
         'Solarium\\Core\\Configurable' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Configurable.php',
         'Solarium\\Core\\ConfigurableInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Core/ConfigurableInterface.php',
         'Solarium\\Core\\Event\\Events' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Event/Events.php',
@@ -3446,9 +3417,11 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\Core\\Event\\PreExecuteRequest' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Event/PreExecuteRequest.php',
         'Solarium\\Core\\Plugin\\AbstractPlugin' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Plugin/AbstractPlugin.php',
         'Solarium\\Core\\Plugin\\PluginInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Plugin/PluginInterface.php',
+        'Solarium\\Core\\Query\\AbstractDocument' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Query/AbstractDocument.php',
         'Solarium\\Core\\Query\\AbstractQuery' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Query/AbstractQuery.php',
         'Solarium\\Core\\Query\\AbstractRequestBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Query/AbstractRequestBuilder.php',
         'Solarium\\Core\\Query\\AbstractResponseParser' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Query/AbstractResponseParser.php',
+        'Solarium\\Core\\Query\\DocumentInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Query/DocumentInterface.php',
         'Solarium\\Core\\Query\\Helper' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Query/Helper.php',
         'Solarium\\Core\\Query\\QueryInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Query/QueryInterface.php',
         'Solarium\\Core\\Query\\RequestBuilderInterface' => __DIR__ . '/..' . '/solarium/solarium/src/Core/Query/RequestBuilderInterface.php',
@@ -3475,6 +3448,7 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\Plugin\\Loadbalancer\\Event\\EndpointFailure' => __DIR__ . '/..' . '/solarium/solarium/src/Plugin/Loadbalancer/Event/EndpointFailure.php',
         'Solarium\\Plugin\\Loadbalancer\\Event\\Events' => __DIR__ . '/..' . '/solarium/solarium/src/Plugin/Loadbalancer/Event/Events.php',
         'Solarium\\Plugin\\Loadbalancer\\Loadbalancer' => __DIR__ . '/..' . '/solarium/solarium/src/Plugin/Loadbalancer/Loadbalancer.php',
+        'Solarium\\Plugin\\Loadbalancer\\SolrCloudLoadbalancer' => __DIR__ . '/..' . '/solarium/solarium/src/Plugin/Loadbalancer/SolrCloudLoadbalancer.php',
         'Solarium\\Plugin\\Loadbalancer\\WeightedRandomChoice' => __DIR__ . '/..' . '/solarium/solarium/src/Plugin/Loadbalancer/WeightedRandomChoice.php',
         'Solarium\\Plugin\\MinimumScoreFilter\\Document' => __DIR__ . '/..' . '/solarium/solarium/src/Plugin/MinimumScoreFilter/Document.php',
         'Solarium\\Plugin\\MinimumScoreFilter\\Filter' => __DIR__ . '/..' . '/solarium/solarium/src/Plugin/MinimumScoreFilter/Filter.php',
@@ -3507,15 +3481,14 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\QueryType\\Extract\\Result' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Extract/Result.php',
         'Solarium\\QueryType\\Graph\\Query' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Graph/Query.php',
         'Solarium\\QueryType\\Graph\\Result' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Graph/Result.php',
+        'Solarium\\QueryType\\ManagedResources\\Query\\AbstractCommand' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/AbstractCommand.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Resources' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Resources.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Stopwords' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Stopwords.php',
-        'Solarium\\QueryType\\ManagedResources\\Query\\Stopwords\\Command\\AbstractCommand' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Stopwords/Command/AbstractCommand.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Stopwords\\Command\\Add' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Stopwords/Command/Add.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Stopwords\\Command\\Delete' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Stopwords/Command/Delete.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Stopwords\\Command\\Exists' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Stopwords/Command/Exists.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Stopwords\\Stopword' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Stopwords/Stopword.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Synonyms' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Synonyms.php',
-        'Solarium\\QueryType\\ManagedResources\\Query\\Synonyms\\Command\\AbstractCommand' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Synonyms/Command/AbstractCommand.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Synonyms\\Command\\Add' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Synonyms/Command/Add.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Synonyms\\Command\\Delete' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Synonyms/Command/Delete.php',
         'Solarium\\QueryType\\ManagedResources\\Query\\Synonyms\\Command\\Exists' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/ManagedResources/Query/Synonyms/Command/Exists.php',
@@ -3545,14 +3518,27 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\QueryType\\Select\\Query\\Query' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Select/Query/Query.php',
         'Solarium\\QueryType\\Select\\RequestBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Select/RequestBuilder.php',
         'Solarium\\QueryType\\Select\\ResponseParser' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Select/ResponseParser.php',
-        'Solarium\\QueryType\\Select\\Result\\AbstractDocument' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Select/Result/AbstractDocument.php',
         'Solarium\\QueryType\\Select\\Result\\Document' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Select/Result/Document.php',
-        'Solarium\\QueryType\\Select\\Result\\DocumentInterface' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Select/Result/DocumentInterface.php',
         'Solarium\\QueryType\\Select\\Result\\Result' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Select/Result/Result.php',
         'Solarium\\QueryType\\Server\\AbstractServerQuery' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/AbstractServerQuery.php',
-        'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\AbstractAction' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/AbstractAction.php',
-        'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\AbstractAsyncAction' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/AbstractAsyncAction.php',
-        'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\AbstractCoreAction' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/AbstractCoreAction.php',
+        'Solarium\\QueryType\\Server\\Api\\Query' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Api/Query.php',
+        'Solarium\\QueryType\\Server\\Api\\RequestBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Api/RequestBuilder.php',
+        'Solarium\\QueryType\\Server\\Api\\ResponseParser' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Api/ResponseParser.php',
+        'Solarium\\QueryType\\Server\\Collections\\Query\\Action\\AbstractCDRAction' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Query/Action/AbstractCDRAction.php',
+        'Solarium\\QueryType\\Server\\Collections\\Query\\Action\\ClusterStatus' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Query/Action/ClusterStatus.php',
+        'Solarium\\QueryType\\Server\\Collections\\Query\\Action\\Create' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Query/Action/Create.php',
+        'Solarium\\QueryType\\Server\\Collections\\Query\\Action\\Delete' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Query/Action/Delete.php',
+        'Solarium\\QueryType\\Server\\Collections\\Query\\Action\\Reload' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Query/Action/Reload.php',
+        'Solarium\\QueryType\\Server\\Collections\\Query\\Query' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Query/Query.php',
+        'Solarium\\QueryType\\Server\\Collections\\ResponseParser' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/ResponseParser.php',
+        'Solarium\\QueryType\\Server\\Collections\\ResponseParser\\ClusterStatus' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/ResponseParser/ClusterStatus.php',
+        'Solarium\\QueryType\\Server\\Collections\\Result\\AbstractResult' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Result/AbstractResult.php',
+        'Solarium\\QueryType\\Server\\Collections\\Result\\ClusterStatusResult' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Result/ClusterStatusResult.php',
+        'Solarium\\QueryType\\Server\\Collections\\Result\\CreateResult' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Result/CreateResult.php',
+        'Solarium\\QueryType\\Server\\Collections\\Result\\DeleteResult' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Result/DeleteResult.php',
+        'Solarium\\QueryType\\Server\\Collections\\Result\\ReloadResult' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Collections/Result/ReloadResult.php',
+        'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\CoreActionInterface' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/CoreActionInterface.php',
+        'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\CoreActionTrait' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/CoreActionTrait.php',
         'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\Create' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/Create.php',
         'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\MergeIndexes' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/MergeIndexes.php',
         'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\Reload' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/Reload.php',
@@ -3564,16 +3550,21 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\Swap' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/Swap.php',
         'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Action\\Unload' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Action/Unload.php',
         'Solarium\\QueryType\\Server\\CoreAdmin\\Query\\Query' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Query/Query.php',
-        'Solarium\\QueryType\\Server\\CoreAdmin\\RequestBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/RequestBuilder.php',
         'Solarium\\QueryType\\Server\\CoreAdmin\\ResponseParser' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/ResponseParser.php',
         'Solarium\\QueryType\\Server\\CoreAdmin\\Result\\Result' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Result/Result.php',
         'Solarium\\QueryType\\Server\\CoreAdmin\\Result\\StatusResult' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/CoreAdmin/Result/StatusResult.php',
+        'Solarium\\QueryType\\Server\\Query\\Action\\AbstractAction' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Query/Action/AbstractAction.php',
+        'Solarium\\QueryType\\Server\\Query\\Action\\AbstractAsyncAction' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Query/Action/AbstractAsyncAction.php',
+        'Solarium\\QueryType\\Server\\Query\\Action\\ActionInterface' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Query/Action/ActionInterface.php',
+        'Solarium\\QueryType\\Server\\Query\\Action\\AsyncActionInterface' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Query/Action/AsyncActionInterface.php',
+        'Solarium\\QueryType\\Server\\Query\\RequestBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Server/Query/RequestBuilder.php',
         'Solarium\\QueryType\\Spellcheck\\Query' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Spellcheck/Query.php',
         'Solarium\\QueryType\\Spellcheck\\RequestBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Spellcheck/RequestBuilder.php',
         'Solarium\\QueryType\\Spellcheck\\ResponseParser' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Spellcheck/ResponseParser.php',
         'Solarium\\QueryType\\Spellcheck\\Result\\Result' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Spellcheck/Result/Result.php',
         'Solarium\\QueryType\\Spellcheck\\Result\\Term' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Spellcheck/Result/Term.php',
         'Solarium\\QueryType\\Stream\\Expression' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Stream/Expression.php',
+        'Solarium\\QueryType\\Stream\\ExpressionBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Stream/ExpressionBuilder.php',
         'Solarium\\QueryType\\Stream\\Query' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Stream/Query.php',
         'Solarium\\QueryType\\Stream\\RequestBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Stream/RequestBuilder.php',
         'Solarium\\QueryType\\Stream\\ResponseParser' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Stream/ResponseParser.php',
@@ -3594,8 +3585,7 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
         'Solarium\\QueryType\\Update\\Query\\Command\\Delete' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/Query/Command/Delete.php',
         'Solarium\\QueryType\\Update\\Query\\Command\\Optimize' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/Query/Command/Optimize.php',
         'Solarium\\QueryType\\Update\\Query\\Command\\Rollback' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/Query/Command/Rollback.php',
-        'Solarium\\QueryType\\Update\\Query\\Document\\Document' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/Query/Document/Document.php',
-        'Solarium\\QueryType\\Update\\Query\\Document\\DocumentInterface' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/Query/Document/DocumentInterface.php',
+        'Solarium\\QueryType\\Update\\Query\\Document' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/Query/Document.php',
         'Solarium\\QueryType\\Update\\Query\\Query' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/Query/Query.php',
         'Solarium\\QueryType\\Update\\RequestBuilder' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/RequestBuilder.php',
         'Solarium\\QueryType\\Update\\ResponseParser' => __DIR__ . '/..' . '/solarium/solarium/src/QueryType/Update/ResponseParser.php',
@@ -4441,10 +4431,10 @@ class ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit8346fe29bd2c3e4f3a0f6dcbd498f0e0::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit74d7958296249903e147526873e80417::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit74d7958296249903e147526873e80417::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit74d7958296249903e147526873e80417::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit74d7958296249903e147526873e80417::$classMap;
 
         }, null, ClassLoader::class);
     }

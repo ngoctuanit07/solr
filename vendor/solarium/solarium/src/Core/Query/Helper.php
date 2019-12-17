@@ -16,7 +16,7 @@ class Helper
      *
      * @var string
      */
-    protected $placeHolderPattern = '/%(L|P|T|)([0-9]+)%/i';
+    protected $placeHolderPattern = '/%(L|P|T|)(\d+)%/i';
 
     /**
      * Array of parts to use for assembling a query string.
@@ -36,16 +36,16 @@ class Helper
      * Solarium Query instance, optional.
      * Used for dereferenced params.
      *
-     * @var AbstractQuery
+     * @var QueryInterface
      */
     protected $query;
 
     /**
      * Constructor.
      *
-     * @param AbstractQuery $query
+     * @param QueryInterface $query
      */
-    public function __construct($query = null)
+    public function __construct(QueryInterface $query = null)
     {
         $this->query = $query;
     }
@@ -65,7 +65,7 @@ class Helper
      *
      * @return string
      */
-    public function escapeTerm($input)
+    public function escapeTerm(string $input): string
     {
         $pattern = '/( |\+|-|&&|\|\||!|\(|\)|\{|}|\[|]|\^|"|~|\*|\?|:|\/|\\\)/';
 
@@ -88,7 +88,7 @@ class Helper
      *
      * @return string
      */
-    public function escapePhrase($input)
+    public function escapePhrase(string $input): string
     {
         return '"'.preg_replace('/("|\\\)/', '\\\$1', $input).'"';
     }
@@ -101,7 +101,8 @@ class Helper
      *
      * @see http://lucene.apache.org/solr/api/org/apache/solr/schema/DateField.html
      *
-     * @param int|string|\DateTimeInterface $input accepted formats: timestamp, date string or DateTime / DateTimeImmutable
+     * @param int|string|\DateTimeInterface $input accepted formats: timestamp, date string, DateTime or
+     *                                             DateTimeImmutable
      *
      * @return string|bool false is returned in case of invalid input
      */
@@ -140,6 +141,10 @@ class Helper
         if ($input) {
             // when we get here the input is always a datetime object
             $input = $input->setTimezone(new \DateTimeZone('UTC'));
+            // Solr seems to require the format PHP erroneously declares as ISO8601.
+            // @todo use DateTimeInterface as soon as we require PHP 7.2 at least:
+            // $iso8601 = $input->format(\DateTimeInterface::ISO8601);
+            /** @noinspection DateTimeConstantsUsageInspection */
             $iso8601 = $input->format(\DateTime::ISO8601);
             $iso8601 = strstr($iso8601, '+', true); //strip timezone
             $iso8601 .= 'Z';
@@ -157,35 +162,34 @@ class Helper
      * From and to can be any type of data. For instance int, string or point.
      * If they are null, then '*' will be used.
      *
-     * Example: rangeQuery('store', '45,-94', '46,-93')
+     * Example: rangeQuery('store', '45,-94', '46,-93', true, false)
      * Returns: store:[45,-94 TO 46,-93]
      *
      * Example: rangeQuery('store', '5', '*', false)
-     * Returns: store:{5 TO *}
+     * Returns: store:{"5" TO *}
      *
-     * @param string $field
-     * @param string $from
-     * @param string $to
-     * @param bool   $inclusive
+     * @param string      $field
+     * @param string|null $from
+     * @param string|null $to
+     * @param bool        $inclusive TRUE if the the range should include the boundaries, FALSE otherwise
+     * @param bool        $escape    Whether the values should be escaped as phrase or not. Default is TRUE because
+     *                               escaping is correct for security reasons. But for location searches (point values),
+     *                               escaping would break the functionality
      *
      * @return string
      */
-    public function rangeQuery($field, $from, $to, $inclusive = true)
+    public function rangeQuery(string $field, ?string $from, ?string $to, bool $inclusive = true, bool $escape = true): string
     {
         if (null === $from) {
             $from = '*';
-        } else {
+        } elseif ($escape) {
             $from = $this->escapePhrase($from);
         }
 
         if (null === $to) {
             $to = '*';
-        } else {
+        } elseif ($escape) {
             $to = $this->escapePhrase($to);
-        }
-
-        if ($inclusive) {
-            return $field.':['.$from.' TO '.$to.']';
         }
 
         if ($inclusive) {
@@ -208,7 +212,7 @@ class Helper
      *
      * @return string
      */
-    public function geofilt($field, $pointX, $pointY, $distance, $dereferenced = false)
+    public function geofilt(string $field, string $pointX, string $pointY, string $distance, bool $dereferenced = false): string
     {
         return $this->qparser(
             'geofilt',
@@ -237,7 +241,7 @@ class Helper
      *
      * @return string
      */
-    public function bbox($field, $pointX, $pointY, $distance, $dereferenced = false)
+    public function bbox(string $field, string $pointX, string $pointY, string $distance, bool $dereferenced = false): string
     {
         return $this->qparser(
             'bbox',
@@ -266,7 +270,7 @@ class Helper
      *
      * @return string
      */
-    public function geodist($field, $pointX, $pointY, $dereferenced = false)
+    public function geodist(string $field, string $pointX, string $pointY, bool $dereferenced = false): string
     {
         return $this->functionCall(
             'geodist',
@@ -288,13 +292,11 @@ class Helper
      *
      * @return string
      */
-    public function qparser($name, $params = [], $dereferenced = false, $forceKeys = false)
+    public function qparser(string $name, array $params = [], bool $dereferenced = false, bool $forceKeys = false): string
     {
         if ($dereferenced) {
             if (!$this->query) {
-                throw new InvalidArgumentException(
-                    'Dereferenced params can only be used in a Solarium query helper instance retrieved from the query '.'by using the getHelper() method, this instance was manually created'
-                );
+                throw new InvalidArgumentException('Dereferenced params can only be used in a Solarium query helper instance retrieved from the query by using the getHelper() method, this instance was manually created.');
             }
 
             foreach ($params as $paramKey => $paramValue) {
@@ -329,7 +331,7 @@ class Helper
      *
      * @return string
      */
-    public function functionCall($name, $params = [], $dereferenced = false)
+    public function functionCall(string $name, array $params = [], bool $dereferenced = false): string
     {
         if ($dereferenced) {
             foreach ($params as $key => $value) {
@@ -339,7 +341,7 @@ class Helper
             return $name.'()';
         }
 
-        return $name.'('.implode($params, ',').')';
+        return $name.'('.implode(',', $params).')';
     }
 
     /**
@@ -366,7 +368,7 @@ class Helper
      *
      * @return string
      */
-    public function assemble($query, $parts)
+    public function assemble(string $query, array $parts): string
     {
         $this->assembleParts = $parts;
 
@@ -389,7 +391,7 @@ class Helper
      *
      * @return string
      */
-    public function join($from, $to, $dereferenced = false)
+    public function join(string $from, string $to, $dereferenced = false): string
     {
         return $this->qparser('join', ['from' => $from, 'to' => $to], $dereferenced, $dereferenced);
     }
@@ -409,7 +411,7 @@ class Helper
      *
      * @return string
      */
-    public function qparserTerm($field, $weight)
+    public function qparserTerm(string $field, float $weight): string
     {
         return $this->qparser('term', ['f' => $field]).$weight;
     }
@@ -426,7 +428,7 @@ class Helper
      *
      * @return string
      */
-    public function cacheControl($useCache, $cost = null)
+    public function cacheControl(bool $useCache, float $cost = null): string
     {
         $cache = 'false';
 
@@ -450,9 +452,9 @@ class Helper
      *
      * @param string $data
      *
-     * @return mixed
+     * @return string
      */
-    public function filterControlCharacters($data)
+    public function filterControlCharacters(string $data): string
     {
         return preg_replace('@[\x00-\x08\x0B\x0C\x0E-\x1F]@', ' ', $data);
     }
@@ -467,7 +469,7 @@ class Helper
      *
      * @return string
      */
-    protected function renderPlaceHolder($matches)
+    protected function renderPlaceHolder(array $matches): string
     {
         $partNumber = $matches[2];
         $partMode = strtoupper($matches[1]);

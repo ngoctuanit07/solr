@@ -1,4 +1,0 @@
-preset: laravel
-
-disabled:
-  - binary_operator_spaces

@@ -14,4 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/ping', 'SolariumController@ping');
+Route::get('/ping', "TestController@ping");

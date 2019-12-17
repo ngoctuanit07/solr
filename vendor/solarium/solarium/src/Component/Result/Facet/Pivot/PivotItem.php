@@ -33,7 +33,7 @@ class PivotItem extends Pivot
     /**
      * Field stats.
      *
-     * @var mixed
+     * @var Stats|null
      */
     protected $stats;
 
@@ -42,7 +42,7 @@ class PivotItem extends Pivot
      *
      * @param array $data
      */
-    public function __construct($data)
+    public function __construct(array $data)
     {
         parent::__construct([]);
 
@@ -66,7 +66,7 @@ class PivotItem extends Pivot
      *
      * @return string
      */
-    public function getField()
+    public function getField(): string
     {
         return $this->field;
     }
@@ -86,7 +86,7 @@ class PivotItem extends Pivot
      *
      * @return int
      */
-    public function getCount()
+    public function getCount(): int
     {
         return $this->count;
     }
@@ -94,9 +94,9 @@ class PivotItem extends Pivot
     /**
      * Get stats.
      *
-     * @return Stats
+     * @return Stats|null
      */
-    public function getStats()
+    public function getStats(): ?Stats
     {
         return $this->stats;
     }
